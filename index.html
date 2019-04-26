@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Events</title>
+
+    <script src="node_modules/angular/angular.min.js"></script>
+
+      <script src="Angular/event.js"></script>
+  </head>
+  <body ng-app='events'>
+    <div ng-controller='eventCTRL'>
+    <p ng-init="getAll()">Hello</p>
+    <ul ng-repeat='p in events'>
+      <li>{{p.name}}</li>
+    </ul>
+    </div>
+  </body>
+</html>
