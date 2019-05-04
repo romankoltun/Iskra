@@ -1,6 +1,6 @@
 {
-  "name": "event",
-  "description": "Event online store",
+  "name": "Iskra",
+  "description": "Local events for you.",
   "version": "0.0.1",
   "private": true,
   "scripts": {

@@ -33,7 +33,7 @@ app.get('/getAllEvents', function (req, res) {
         "events": ""
     };
 
-        connection.query('SELECT * FROM event', function(err, rows, fields) {
+        connection.query('SELECT username FROM login', function(err, rows, fields) {
 
 console.log(fields);
                 data["error"] = 0;
