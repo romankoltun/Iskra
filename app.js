@@ -21,10 +21,12 @@ connection.connect(function(err) {
   console.log("Connected!");
 });
 
+
 app.get('/', function (req, res) {
     console.log('Who you are?');
-        res.sendFile(__dirname + '/index.html');
+        res.sendFile(__dirname + '/map.html');
 });
+
 
 app.get('/getAllEvents', function (req, res) {
   console.log("GET Request :: /getAllEvents");

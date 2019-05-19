@@ -1,10 +1,10 @@
 {
-  "name": "Iskra",
+  "name": "iskra",
   "description": "Local events for you.",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node profile.js"
   },
   "dependencies": {
     "angular": "^1.7.8",
@@ -14,11 +14,33 @@
     "angular-messages": "^1.7.8",
     "angular-route": "^1.7.8",
     "angular-ui-bootstrap": "^2.5.6",
-    "body-parser": "^1.15.1",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "cors": "^2.8.5",
     "ejs": "^2.6.1",
-    "express": "^4.10.6",
+    "express": "^4.17.0",
     "express-session": "^1.15.6",
+    "jquery": "^3.4.1",
+    "multer": "^1.4.1",
     "mysql": "^2.5.4",
-    "nodemailer": "^6.0.0"
-  }
+    "nodemailer": "^6.0.0",
+    "popper": "^1.0.1"
+  },
+  "main": "profile.js",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-execute": "^0.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LausDio/Iskra.git"
+  },
+  "keywords": [],
+  "author": "Antonina Ivanova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LausDio/Iskra/issues"
+  },
+  "homepage": "https://github.com/LausDio/Iskra#readme"
 }

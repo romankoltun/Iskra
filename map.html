@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Iskra</title>
+
+      <script src="node_modules/angular/angular.min.js"></script>
+      <script src="Angular/event.js"></script>
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""/>
+      <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+      crossorigin=""></script>
+      <link rel="stylesheet" type="text/css" href="map.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  </head>
+  <body ng-app='events'>
+    <div class="span9" style="height:100%">
+    <div id="map-wrapper">
+        <div id="button-wrapper">
+            <input type="button" id="Btn1" value="Btn1" class="btnStyle span3" />
+        </div>
+        <div id="mapid"></div> <script src="map.js"></script>
+    </div>
+</div>
+  </body>
+</html>
