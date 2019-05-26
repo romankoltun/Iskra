@@ -1,0 +1,85 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+html, body, #mapid {
+  width: 375px;
+  height: 667px;
+
+  background: #FFFFFF;
+}
+#map-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 1px solid black;
+}
+.waves-effect{
+    background-color: rgba(255, 255, 255, 0.704);
+    color: #FFFFFF;
+}
+nav {
+	position: absolute;
+    width: 363px;
+    height: 46px;
+    left: 6px;
+    top: 7px;
+    line-height: 46px;
+    z-index: 500;
+}
+nav .brand-logo {
+  font-family: HelveticaNeueCyr;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  display: flex;
+
+  color: #161111;
+}
+nav #nav-mobile a{
+  width: 46px;
+  height: 46px;
+}
+#button-wrapper {
+	position: absolute;
+  z-index: 500;
+  left: 298px;
+  top: 559px;
+}
+
+#calendar {
+  z-index: 500;
+  position: absolute;
+  width: 71px;
+  height: 47px;
+  left: 298px;
+  top: 84px;
+}
+
+#my-location {
+  z-index: 500;
+  position: absolute;
+  left: 298px;
+  top: 323px;
+}
+#date-select a{
+  width: 80px;
+  height: 25px;
+
+  font-family: HelveticaNeueCyr;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+
+  color: #161111;
+}
+#date-select #week{
+  width: 80px;
+  height: 55px;
+}
+#date-select {
+  z-index: 500;
+  position: absolute;
+  left: 285px;
+  top: 157px;
+}

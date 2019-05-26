@@ -1,0 +1,157 @@
+.btn input[type="file"]{
+  margin: 0;
+  position: absolute;
+  width: 281px;
+  height: 46px;
+  left: 41px;
+  top: 539px;
+
+  background: rgba(8, 1, 12, 0.852);
+
+  font-family: HelveticaNeueCyr;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  border: 0;
+  cursor: pointer;
+
+  color: #F0F0F0;
+}
+h2 {
+  position: absolute;
+  width: 207px;
+  height: 36px;
+  left: 47px;
+  top: 104px;
+
+  font-family: HelveticaNeueCyr;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  /* identical to box height */
+
+
+  color: #2E1B45;
+}
+.login{
+  position: absolute;
+  width: 66px;
+  height: 25px;
+  left: 47px;
+  top: 177px;
+
+  font-family: HelveticaNeueCyr;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 25px;
+  /* identical to box height */
+
+
+  color: #2E1B45;
+}
+.loginVal{
+  position: absolute;
+  width: 70px;
+  height: 30px;
+  left: 47px;
+  top: 207px;
+
+  font-family: Calibri;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+
+  color: #161111;
+}
+.email{
+  position: absolute;
+  width: 81px;
+  height: 24px;
+  left: 47px;
+  top: 242px;
+
+  font-family: HelveticaNeueCyr;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  /* identical to box height */
+
+
+  color: #2E1B45;
+}
+.emailVal{
+  position: absolute;
+  width: 254px;
+  height: 29px;
+  left: 47px;
+  top: 274px;
+
+  font-family: Calibri;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #161111;
+}
+.waves-effect{
+    background-color: rgba(255, 255, 255, 0.704);
+    color: #FFFFFF;
+}
+
+a[type="password-change"]{
+  position: absolute;
+  width: 175px;
+  height: 24px;
+  left: 47px;
+  top: 458px;
+
+  font-family: HelveticaNeueCyr;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  /* identical to box height */
+
+
+  color: #2E1B45;
+}
+
+a[type="logout"]{
+  position: absolute;
+  width: 68px;
+  height: 24px;
+  left: 47px;
+  top: 539px;
+
+  font-family: HelveticaNeueCyr;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  /* identical to box height */
+
+
+  color: #F2790A;
+}
+
+a[type="delete-profile"]{
+  position: absolute;
+  width: 204px;
+  height: 28px;
+  left: 47px;
+  top: 578px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #000000;
+}

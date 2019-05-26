@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk" dir="ltr" ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-messages.js"></script>
+		<script src="/routes/errorpopup.js"></script>
+		<script src="/routes/login.js"></script>
+		<link rel="stylesheet" type="text/css" href="/public/stylesheets/standart.css">
+		<link rel="stylesheet" type="text/css" href="/public/stylesheets/login.css">
+		<title>Вхід</title>
+	</head>
+	<body>
+		<div class="login-form">
+			<h4>Привіт, це</h4>
+			<h1>Iskra</h1>
+			<form action="/views/auth" method="POST" novalidate ng-controller="CheckoutController as checkout" ng-submit="checkout.onSubmit();" name="login-form">
+				<input type="text" name="username" placeholder="Логін" ng-model="checkout.details.username" ng-minlength="4" required="required">
+				<div ng-if="login-form.username.$touched" ng-messages="register.username.$error">
+					<div ng-message="required">
+						Це поле є обов'язковим!
+					</div>
+					<div ng-message="minlength">
+						Закороткий логін!
+					</div>
+				</div>
+				<label class="container">Запам’ятати мене
+				  <input type="checkbox" checked="checked">
+				  <span class="checkmark"></span>
+				</label>
+				<input type="password" name="password" placeholder="Пароль" required>
+				<div ng-if="login-form.password.$touched" ng-messages="register.username.$error">
+					<div ng-message="required">
+						Це поле є обов'язковим!
+					</div>
+				</div>
+				<a href="#" type="forgot">Забули пароль?</a>
+				<input ui-sref="login" type="submit" value="Увійти">
+			</form>
+			<a href="register.html" type="register">Вперше у нас?</a>
+		</div>
+	</body>
+</html>
