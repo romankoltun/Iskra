@@ -1,22 +1,17 @@
-.btn input[type="file"]{
+input[type="file"]{
   margin: 0;
   position: absolute;
-  width: 281px;
-  height: 46px;
-  left: 41px;
-  top: 539px;
-
-  background: rgba(8, 1, 12, 0.852);
+  width: 250px;
+  height: 30px;
+  left: 47px;
+  top: 420px;
 
   font-family: HelveticaNeueCyr;
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
+  font-size: 15px;
   line-height: 30px;
   border: 0;
-  cursor: pointer;
-
-  color: #F0F0F0;
 }
 h2 {
   position: absolute;
@@ -99,9 +94,44 @@ h2 {
 
   color: #161111;
 }
+.avatarCon{
+  position: absolute;
+  left: 190px;
+  top: 330px;
+}
+
+.avatar{
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+}
+
 .waves-effect{
     background-color: rgba(255, 255, 255, 0.704);
     color: #FFFFFF;
+}
+
+button[type="avatar-change"]{
+  position: absolute;
+  width: 151px;
+  height: 60px;
+  left: 20px;
+  top: 330px;
+
+  background-color: #FFFFFF; /* Green */
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  font-family: HelveticaNeueCyr;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+
+  color: #2E1B45;
 }
 
 a[type="password-change"]{
@@ -109,7 +139,7 @@ a[type="password-change"]{
   width: 175px;
   height: 24px;
   left: 47px;
-  top: 458px;
+  top: 470px;
 
   font-family: HelveticaNeueCyr;
   font-style: normal;

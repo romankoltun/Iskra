@@ -4,38 +4,10 @@
   height: 36px;
   z-index: 500;
 }
-img{
-  position: absolute;
-  width: 152px;
-  height: 152px;
-  left: 111px;
-  top: 42px;
-}
 h2{
   position: absolute;
-  left: 40px;
-  top: 202px;
-}
-
-p{
-  position: absolute;
-  width: 184px;
-  height: 30px;
-  left: 92px;
-  top: 235px;
-
-  font-family: HelveticaNeueCyr;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 110%;
-  /* or 15px */
-
-  display: flex;
-  align-items: center;
-  text-align: center;
-
-  color: #161111;
+  left: 47px;
+  top: 74px;
 }
 
 input[type="submit"] {
@@ -67,7 +39,7 @@ a[type="login"]{
 .info{
   position: absolute;
   left: 48.07px;
-  top: 260px;
+  top: 129px;
   width: 276px;
   height: 27px;
 }

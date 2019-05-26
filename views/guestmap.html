@@ -2,7 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Iskra</title>
+    <title>Іскра</title>
+    <link rel="icon" href="/public/images/logo.png">
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
       integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
       crossorigin=""/>
@@ -13,6 +14,7 @@
       <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
       <script src="node_modules/angular/angular.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
       <script src="Angular/event.js"></script>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   		<link rel="stylesheet" type="text/css" href="/stylesheets/standart.css">
@@ -40,7 +42,7 @@
         <a class="btn-floating btn-large waves-effect waves-orange" onclick="locateUser();return false;"><i class="material-icons black-text">my_location</i></a>
     </div>
     <div class="span9" >
-      <div id="map-wrapper">
+      <div id="map-wrapper" ng-controller="mapCTRL">
           <div id="mapid"></div>
           <script src="routes/map.js"></script>
       </div>

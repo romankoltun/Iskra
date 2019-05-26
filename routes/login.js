@@ -23,31 +23,6 @@ app.use(session({
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 
-//app.get('/', (request, response) => response.render('login'));
-
-/*app.post('/views/auth', function(request, response) {
-  var username = request.body.username;
-  var password = request.body.password;
-  var permission_id;
-  if (username && password) {
-    console.log('POST Request :: /views/auth');
-    connection.query('SELECT * FROM events.user WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
-      if (results.length > 0) {
-        request.session.loggedin = true;
-        request.session.username = username;
-        request.session.permission_id = results[0].permission_id;
-        response.redirect('/');
-      } else {
-        response.send('Неправильний логін або пароль!');
-      }
-      response.end();
-    });
-  } else {
-    response.send('Будь-ласка, введіть пароль і логін!');
-    response.end();
-  }
-});*/
-
 module.exports = app;
 app.get('/views/home', function(request, response) {
 	if (request.session.loggedin) {

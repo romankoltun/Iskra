@@ -2,7 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Iskra</title>
+    <title>Іскра</title>
+    <link rel="icon" href="/public/images/logo.png">
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
       integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
       crossorigin=""/>
@@ -40,13 +41,13 @@
         <div class="row"><a class="btn-small waves-effect waves-orange black-text center" id="week">Цього тижня</a></div>
     </div>
     <div id="button-wrapper">
-        <a class="btn-floating btn-large waves-effect waves-orange"><i class="material-icons black-text">add</i></a>
+        <a href="/views/addevent.html" class="btn-floating btn-large waves-effect waves-orange"><i class="material-icons black-text">add</i></a>
     </div>
     <div id="my-location">
         <a class="btn-floating btn-large waves-effect waves-orange" onclick="locateUser();return false;"><i class="material-icons black-text">my_location</i></a>
     </div>
     <div class="span9" >
-      <div id="map-wrapper">
+      <div id="map-wrapper" ng-controller="mapCTRL">
           <div id="mapid"></div>
           <script src="routes/map.js"></script>
       </div>

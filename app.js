@@ -3,6 +3,8 @@ var app = express();
 var bodyParser = require("body-parser");
 var mysql = require('mysql');
 var session = require('express-session');
+var path = require('path');
+var http = require('http');
 var multer  = require('multer');
 
 
@@ -57,7 +59,6 @@ app.get('/', function (request, response) {
         response.sendFile(__dirname + '/views/guestmap.html');
     }
 });
-//app.get('/profile', (req, res) => res.render('profile'));
 
 app.post('/views/auth', function(request, response) {
   var username = request.body.username;
@@ -98,23 +99,23 @@ app.get('/views/logOut', function(req, res, next) {
 app.post('/views/register', function(req, res) {
     var username = req.body.username;
     var password = req.body.password;
-
     var email = req.body.email;
     var data = {
         "error": 1,
         "products": ""
     };
-    console.log('POST Request :: /views/auth');
+    console.log('POST Request :: /views/register');
     if (!!password && !!username && !! email) {
-        connection.query("INSERT INTO events.user SET password = ?, username=?, email=?", [password, username, email], function(err, rows, fields) {
-
+        connection.query("INSERT INTO events.user SET password = ?, username = ?, email=?", [password, username, email], function(err, rows, fields) {
           req.session.loggedin = true;
           req.session.username = username;
-          req.session.permission_id = 3;
           console.log("Added: " + [password, username]);
-          res.redirect('http://localhost:3000');
         });
     };
+    req.session.loggedin = true;
+    req.session.username = username;
+    req.session.permission_id = 3;
+    res.redirect('/');
 });
 
 app.get('/views/profile', function(req, res) {
@@ -161,18 +162,38 @@ var server = app.listen(3000, function() {
 
     console.log("dummy app listening at: " + host + ":" + port);
 })
-var storage = multer.diskStorage({
-  destination: './public/images/avatars/',
-  filename: function (req, file, cb) {
-      cb(null,file.fieldname+'-'+Date.now()+path.extname(file.originalname));
-  }
-});
-var upload = multer({
-  storage: storage,
-  limits: {fileSize: 100000000},
-  fileFilter: function(req, file, cb){
-    checkFileType(file, cb);
-  }
-}).single('file');
 
-//app.post('/multer', upload.single('file'));
+var storage = multer.diskStorage({
+  destination: '/public/images/avatars',
+  filename: function (req, file, cb) {
+    cb(null, file.originalname.replace(path.extname(file.originalname), "") + '-' + Date.now() + path.extname(file.originalname))
+  }
+})
+
+var upload = multer({ storage: storage })
+
+app.post('/savedata', upload.single('file'), function(req,res,next){
+    console.log('Uploade Successful ', req.file, req.body);
+});
+app.get('/getAll', function(req, res) {
+    console.log("GET Request :: /getAllEvents");
+    var data = {
+        "events": ""
+    };
+        connection.query('SELECT* FROM event;', function(err, rows, fields) {
+            if (rows.length !== 0 && !err) {
+                data["events"] = rows;
+                console.log("drebo is pidor");
+                res.json(rows);
+            } else if (rows.length === 0) {
+                //Error code 2 = no rows in db.
+                data["events"] = 'No buildings Found..';
+                res.json(rows);
+            } else {
+                data["events"] = 'Error while performing query';
+                res.json(rows);
+                console.log('Error while performing Query: ' + err);
+            }
+
+    });
+});

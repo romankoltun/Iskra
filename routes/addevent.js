@@ -15,8 +15,5 @@ var pool = mysql.createPool({
     user: 'root',
     password: '10tinogu',
     database: 'events'
-    port: '3000'
+    port: '3306'
 });
-
-
-module.exports = router;
