@@ -1,2 +1,2 @@
 # Iskra
-App that shows local events on map. Basically my coursework.
+The app shows local events on the map.
