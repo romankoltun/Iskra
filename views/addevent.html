@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk" dir="ltr" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/public/images/logo.png">
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-messages.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+		<link rel="stylesheet" type="text/css" href="/public/stylesheets/standart.css">
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/addevent.css">
+    <title>Додати подію</title>
+  </head>
+  <body ng-controller="register-controller">
+    <div id="back">
+      <a href="/" class="btn-flat btn-large"><i class="material-icons black-text">keyboard_arrow_left</i></a>
+    </div>
+
+    <h2>Створити подію</h2>
+    <form  action="/views/register" method="POST">
+      <div class="info">
+            <div class="row">
+              <div class="input-field col s12" id="nameholder">
+                <input id="name" type="text" class="validate" ng-model="eventModel.name">
+                <label for="name">Назва</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12" id="descriptionholder">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Опис</label>
+              </div>
+            </div>
+            <div class="row" id="dateholder">
+              <div class="input-field col s12">
+                <input type="text" class="datepicker">
+              </div>
+            </div>
+        </div>
+        <input href="/" type="submit" value="Підтвердити" ng-click="createEvent()">
+    </form>
+<script>
+  const Calendar = document.querySelector('.datepicker');
+  M.Datepicker.init(Calendar,{});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  </body>
+</html>

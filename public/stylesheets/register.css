@@ -1,0 +1,115 @@
+.back{
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  z-index: 500;
+}
+img{
+  position: absolute;
+  width: 152px;
+  height: 152px;
+  left: 111px;
+  top: 42px;
+}
+h2{
+  position: absolute;
+  left: 40px;
+  top: 202px;
+}
+
+p{
+  position: absolute;
+  width: 184px;
+  height: 30px;
+  left: 92px;
+  top: 235px;
+
+  font-family: HelveticaNeueCyr;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 110%;
+  /* or 15px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #161111;
+}
+
+input[type="submit"] {
+  position: absolute;
+  width: 281px;
+  height: 46px;
+  left: 48px;
+  top: 530px;
+}
+
+a[type="login"]{
+  position: absolute;
+  width: 91px;
+  height: 17px;
+  left: 232px;
+  top: 575px;
+
+  font-family: Calibri;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+
+  color: #A3A3A3;
+}
+
+.info{
+  position: absolute;
+  left: 48.07px;
+  top: 260px;
+  width: 276px;
+  height: 27px;
+}
+#usernameholder{
+  position: absolute;
+  width: 276px;
+  height: 31px;
+  left: 0px;
+  top: 0px;
+}
+input[type="text"]{
+  position: absolute;
+  width: 276px;
+  height: 31px;
+  left: 0px;
+  top: 40px;
+}
+#passwordholder{
+  position: absolute;
+  width: 276px;
+  height: 31px;
+  left: 0px;
+  top: 80px;
+}
+input[type="password"]{
+ position: absolute;
+ width: 276px;
+ height: 31px;
+ left: 0px;
+ top: 40px;
+}
+#emailholder{
+  position: absolute;
+  width: 276px;
+  height: 31px;
+  left: 0px;
+  top: 150px;
+}
+input[type="email"]{
+ position: absolute;
+ width: 276px;
+ height: 31px;
+ left: 0px;
+ top: 40px;
+}

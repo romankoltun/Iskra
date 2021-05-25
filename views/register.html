@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk" dir="ltr" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/public/images/logo.png">
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-messages.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+		<script src="/routes/errorpopup.js"></script>
+		<script type="module" src="/routes/register.js"></script>
+		<script src="/routes/register-controller.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/public/stylesheets/standart.css">
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/register.css">
+    <title>Реєстрація</title>
+  </head>
+  <body ng-controller="register-controller" >
+    <div id="back">
+      <a href="/" class="btn-flat btn-large"><i class="material-icons black-text">keyboard_arrow_left</i></a>
+    </div>
+    <img src="/public/images/marker-logo.png" alt="Логотип Іскри">
+    <h2>Створіть профіль</h2>
+    <p>Щоб створювати свої події і брати участь у чужих</p>
+    <form  action="/views/register" method="POST">
+      <div class="info">
+            <div class="row">
+              <div class="input-field col s12" id="loginholder">
+                <input id="username" type="text" class="validate" ng-model="loginModel.username">
+                <label for="username">Логін</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12" id="passwordholder">
+                <input id="password" type="password" class="validate" ng-model="loginModel.password">
+                <label for="password">Пароль</label>
+              </div>
+            </div>
+            <div class="row" id="emailholder">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate" ng-model="loginModel.email">
+                <label for="email">Електронна пошта</label>
+              </div>
+            </div>
+        </div>
+        <input href="/" type="submit" value="Зареєструватися" ng-click="signUp()">
+    </form>
+    <a href="login.html" type="login">Вже є профіль?</a>
+
+  </body>
+</html>

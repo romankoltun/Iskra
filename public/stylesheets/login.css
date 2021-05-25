@@ -1,0 +1,97 @@
+.login-form {
+  margin: 0 auto;
+  position: absolute;
+  font-family: Tahoma, Geneva, sans-serif;
+  position: absolute;
+  width: 387px;
+  height: 678px;
+  left: -12px;
+  top: 0px;
+
+  background: url(/public/images/login-bg.png) no-repeat;
+  background-size: cover;
+  background-color: #FFFFFF;
+}
+
+.login-form a[type="forgot"]{
+  width: 94px;
+  height: 17px;
+  left: 228px;
+  top: 473px;
+}
+.login-form a[type="register"]{
+  width: 86px;
+  height: 17px;
+  left: 233px;
+  top: 593px;
+}
+.login-form h4 {
+  width: 205px;
+  height: 26px;
+  left: 50px;
+  top: 131px;
+}
+.login-form h1 {
+  width: 236px;
+  height: 42px;
+  left: 44px;
+  top: 150px;
+}
+.login-form input[type="password"] {
+  margin: 0;
+  position: absolute;
+  width: 281px;
+  height: 46px;
+  left: 44px;
+  top: 418px;
+
+  border: 0;
+  background: rgba(255, 255, 255, 0.852);
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.852) inset;
+}
+.login-form input[type="text"] {
+  margin: 0;
+  position: absolute;
+  width: 281px;
+  height: 46px;
+  left: 44px;
+  top: 345px;
+
+  border: 0;
+  margin-bottom: 15px;
+
+  background: rgba(255, 255, 255, 0.852);
+}
+.login-form input[type="submit"] {
+  width: 281px;
+  height: 46px;
+  left: 41px;
+  top: 539px;
+}
+
+.login-form .container{
+  position: absolute;
+  width: 107px;
+  height: 17px;
+  left: 180px;
+  top: 396px;
+
+  font-family: Calibri;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+
+  color: #A3A3A3;
+}
+
+.back{
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  z-index: 500;
+}

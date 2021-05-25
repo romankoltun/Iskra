@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk" dir="ltr" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/public/images/logo.png">
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-messages.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+		<script src="/routes/errorpopup.js"></script>
+		<script src="/routes/photo-controller.js"></script>
+		<script src="/routes/profile-controller.js"></script>
+		<link rel="stylesheet" type="text/css" href="/public/stylesheets/standart.css">
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/profile.css">
+    <title>Мій профіль</title>
+  </head>
+  <body>
+    <div id="back">
+      <a href="/" class="btn-flat btn-large"><i class="material-icons black-text">keyboard_arrow_left</i></a>
+    </div>
+    <h2>Мій профіль</h2>
+      <form  action="/views/profile" method="POST">
+      <div ng-controller="profile-controller">
+      <div ng-init='getUserInfo()'>
+        <p class="login">Логін: </p><div class="loginVal"><p>{{ loginModel.username }}</p></div>
+        <p class="email">Пошта: </p><div class="emailVal"><p>{{ loginModel.email }}</p></div>
+
+        <div class="avatarCon"><img class="avatar" src="/public/images/avatars/{{loginModel.avatar}}" alt="user avatar"></div>
+      </div>
+    </div>
+    <div ng-controller = "myCtrl"><input type = "file" file-model = "myFile"/>
+    <button type="avatar-change" name="button" ng-click = "uploadFile()">Змінити фото</button></div>
+  </form>
+    <a href="register.html" type="password-change">Змінити пароль</a>
+    <a href="/views/logOut" type="logout">Вийти</a>
+    <a href="register.html" type="delete-profile">Видалити аккаунт</a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  </body>
+</html>
